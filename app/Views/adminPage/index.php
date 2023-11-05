@@ -320,7 +320,7 @@
                                             <th>Nama</th>
                                             <th>NIK</th>
                                             <th>No. HP</th>
-                                            <th>Desa</th>
+                                            <th>Jenis Surat</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>

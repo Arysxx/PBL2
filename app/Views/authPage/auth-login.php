@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in - Voler Admin Dashboard</title>
+    <title>Sign in</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
     
     <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.svg') ?>" type="image/x-icon">
@@ -20,7 +20,7 @@
             <div class="card pt-4">
                 <div class="card-body">
                     <div class="text-center mb-5">
-                        <img src="assets/images/favicon.svg" height="48" class='mb-4'>
+                        <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
                         <h3>Sign In</h3>
                     </div>
                     <form action="index.html">
@@ -37,11 +37,11 @@
                             <div class="clearfix">
                                 <label for="password">Password</label>
                                 <a href="auth-forgot-password.html" class='float-right'>
-                                    <small>Forgot password?</small>
+                                    <small>lupa password?</small>
                                 </a>
                             </div>
                             <div class="position-relative">
-                                <input type="text" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password">
                                 <div class="form-control-icon">
                                     <i data-feather="lock"></i>
                                 </div>
