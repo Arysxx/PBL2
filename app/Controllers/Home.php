@@ -12,4 +12,10 @@ class Home extends BaseController
     {
         return view('adminPage/index');
     }
+
+    public function layout(): string
+    {
+        return view('component/file');
+    }
+
 }

@@ -14,3 +14,7 @@ $routes->get('/home', 'Home::home');
 // Routing authorization
 $routes->get('/login', 'AuthController::index');
 $routes->get('/register', 'AuthController::register');
+
+
+
+$routes->get('/layout', 'Home::layout');
