@@ -77,3 +77,5 @@
             </li>
         </ul>
     </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
