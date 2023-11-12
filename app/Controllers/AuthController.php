@@ -18,4 +18,8 @@ class AuthController extends BaseController
     // {
     //     return view('authPage/auth-login');
     // }
+    public function PendudukLogin(): string 
+    {
+        return view('authPage/PendudukAuth');
+    }
 }

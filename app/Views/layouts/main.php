@@ -17,12 +17,7 @@
 <div id="app">
     <div id="sidebar" class='active'>
         <?= $this->include('layouts/sidebar') ?>
-
-
-
         <?= $this->renderSection('content') ?>
-
-        
         <?= $this->include('layouts/footer') ?>
     </div>
 </div>
