@@ -5,7 +5,7 @@
     <!-- layout sidebar  -->
     <div class="sidebar-menu">
         <ul class="menu">
-            <li class='sidebar-title'>Main Menu</li>
+            <li class='sidebar-title'>Menu Utama</li>
             <li class="sidebar-item active ">
                 <a href="index.html" class='sidebar-link'>
                     <i data-feather="home" width="20"></i> 
@@ -15,7 +15,7 @@
             <li class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
                     <i data-feather="user" width="20"></i> 
-                    <span>Kelole Pengguna</span>
+                    <span>Kelola Pengguna</span>
                 </a>
                 <ul class="submenu ">                    
                     <li>
@@ -29,7 +29,7 @@
             <li class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
                     <i data-feather="triangle" width="20"></i> 
-                    <span>Kelole Data Penduduk</span>
+                    <span>Kelola Data Penduduk</span>
                 </a>
                 
                 <ul class="submenu ">                  
@@ -37,7 +37,7 @@
                         <a href="component-alert.html">Data Penduduk</a>
                     </li>
                     <li>
-                        <a href="component-alert.html">Tambah Penduduk</a>
+                        <a href="component-alert.html">Tambah Data Penduduk</a>
                     </li>
                 </ul>                
             </li>
@@ -54,7 +54,7 @@
                         <a href="component-extra-avatar.html">Buat Surat</a>
                     </li>
                     <li>
-                        <a href="component-extra-avatar.html">Proses Surat Masuk</a>
+                        <a href="component-extra-avatar.html">Surat Masuk</a>
                     </li>
                 </ul>
             </li>
