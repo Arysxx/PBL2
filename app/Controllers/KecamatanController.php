@@ -9,11 +9,19 @@ class KecamatanController extends BaseController
     public function index()
     {
 
-        $data = [
+        $page = [
             'title' => 'Data Kecamatan',
-            'content' => 'editor',
             'head' => 'Data Kecamatan'
         ];
-        return view('adminPage/kecamatan_table', $data);
+        return view('adminPage/kecamatan_table', $page);
+    }
+
+    public function add_kecamatan()
+    {
+        $page = [
+            'title' => 'Tambah Kecamatan',
+            'head' => 'Tambah Kecamatan'
+        ];
+        return view('adminPage/add_kecamatan_form', $page);
     }
 }

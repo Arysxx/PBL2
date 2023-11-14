@@ -53,10 +53,10 @@
                         </a>
                         <ul class="submenu ">                    
                             <li>
-                                <a href="component-alert.html">Daftar Pengguna</a>
+                                <a href="<?= base_url('/user'); ?>">Daftar Pengguna</a>
                             </li>
                             <li>
-                                <a href="component-alert.html">Tambah Pengguna</a>
+                                <a href="<?= base_url('/user/tambah'); ?>">Tambah Pengguna</a>
                             </li>  
                         </ul>
                     </li>
@@ -85,7 +85,7 @@
                                 <a href="component-extra-divider.html">Daftar Surat</a>
                             </li>
                             <li>
-                                <a href="component-extra-avatar.html">Buat Surat</a>
+                                <a href="<?= base_url('surat/editor'); ?>">Buat Surat</a>
                             </li>
                             <li>
                                 <a href="component-extra-avatar.html">Surat Masuk</a>
@@ -105,7 +105,7 @@
                                 <a href="<?= base_url('/kecamatan'); ?>">Kelola Kecamatan</a>
                             </li>
                             <li>
-                                <a href="form-element-input-group.html">Kelola Desa</a>
+                                <a href="<?= base_url('/desa'); ?>">Kelola Desa</a>
                             </li>
                         </ul>
                     </li>
