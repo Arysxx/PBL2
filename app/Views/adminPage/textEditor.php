@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/main'); ?>
 
-<?= $this->section('editor'); ?>
+<?= $this->section('main-content'); ?>
+
 <div class="main-content container-fluid">
     <div class="page-title">
         <div class="row">

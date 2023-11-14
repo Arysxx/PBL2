@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?></title>
+    <title><?= $title; ?></title>
     
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
 
@@ -102,7 +102,7 @@
                         </a> 
                         <ul class="submenu ">  
                             <li>
-                                <a href="form-element-input.html">Kelola Kecamatan</a>
+                                <a href="<?= base_url('/kecamatan'); ?>">Kelola Kecamatan</a>
                             </li>
                             <li>
                                 <a href="form-element-input-group.html">Kelola Desa</a>
@@ -181,7 +181,7 @@
             </div>
         </nav>
 
-        <?= $this->renderSection('content') ?>
+        <?= $this->renderSection('main-content') ?>
 
         <?= $this->include('layouts/footer') ?>
     </div>

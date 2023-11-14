@@ -26,6 +26,7 @@ $routes->get('/penduduk-login', 'AuthController::PendudukLogin');
 
 $routes->get('/layout', 'Home::layout');
 $routes->get('/editor', 'EditorController::index');
+$routes->get('/kecamatan', 'KecamatanController::index');
 
 
 // Routing logout
