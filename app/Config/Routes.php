@@ -10,17 +10,16 @@ $routes->setDefaultController('Home'); // Ganti 'Home' dengan controller default
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 // $routes->set404Override('CustomController::show404');
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
 
 // Routing authorization
-$routes->get('/login', 'AuthController::index');
+$routes->get('/', 'AuthController::index');
 $routes->get('/register', 'AuthController::register');
 $routes->get('/penduduk-login', 'AuthController::PendudukLogin');
 
 
 // routing dashboard
-$routes->get('/home', 'Home::home');
-
+$routes->get('/dashboard', 'Home::index');
 $routes->get('/layout', 'Home::layout');
 
 
@@ -46,6 +45,7 @@ $routes->get('/desa/tambah', 'DesaController::add_desa');
 // routing  kelola penduduk 
 
 // routing penduduk 
+$routes->get('/penduduk', 'PendudukController::index');
 
 // Routing logout
 

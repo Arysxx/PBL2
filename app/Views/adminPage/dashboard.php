@@ -1,6 +1,6 @@
 <?= $this->extend('layouts/main'); ?>
 
-<?= $this->section('dashboard'); ?>
+<?= $this->section('main-content'); ?>
 
 <div class="main-content container-fluid">
     <div class="page-title">

@@ -6,9 +6,13 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('welcome_message');
+        $page = [
+            'title' => 'Data Penduduk',
+            'head' => 'Data Penduduk'
+        ];
+        return view('adminPage/dashboard', $page);
     }
-    public function home(): string
+    public function dashboard(): string
     {
         return view('adminPage/index');
     }

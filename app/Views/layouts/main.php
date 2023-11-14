@@ -40,8 +40,8 @@
             <div class="sidebar-menu">
                 <ul class="menu">
                     <li class='sidebar-title'>Menu Utama</li>
-                    <li class="sidebar-item active ">
-                        <a href="index.html" class='sidebar-link'>
+                    <li class="sidebar-item">
+                        <a href="<?= base_url('/dashboard'); ?>" class='sidebar-link'>
                             <i data-feather="home" width="20"></i> 
                             <span>Dashboard</span>
                         </a>
@@ -68,10 +68,10 @@
                         
                         <ul class="submenu ">                  
                             <li>
-                                <a href="component-alert.html">Data Penduduk</a>
+                                <a href="<?= base_url('/penduduk'); ?>">Data Penduduk</a>
                             </li>
                             <li>
-                                <a href="component-alert.html">Tambah Data Penduduk</a>
+                                <a href="<?= base_url('/penduduk/tambah'); ?>">Tambah Penduduk</a>
                             </li>
                         </ul>                
                     </li>
@@ -105,7 +105,13 @@
                                 <a href="<?= base_url('/kecamatan'); ?>">Kelola Kecamatan</a>
                             </li>
                             <li>
+                                <a href="<?= base_url('/kecamatan/tambah'); ?>">Tambah Kecamatan</a>
+                            </li>
+                            <li>
                                 <a href="<?= base_url('/desa'); ?>">Kelola Desa</a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url('/desa/tambah'); ?>">Tambah Desa</a>
                             </li>
                         </ul>
                     </li>

@@ -78,6 +78,7 @@
                                     </select>
                                     <!-- <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button> -->
                                 </div>
+                                <a href="<?= base_url('/'); ?>">Have an account? Login</a>
                                 <div class="col-sm-12 d-flex justify-content-end">
                                     <button type="submit" class="btn btn-primary mr-1 mb-1">Daftar</button>
                                 </div>
