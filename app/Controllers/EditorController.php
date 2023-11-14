@@ -8,6 +8,11 @@ class EditorController extends BaseController
 {
     public function index()
     {
-        return view('adminPage/textEditor');
+        $data = [
+            'title' => 'Buat Surat',
+            'content' => 'editor',
+            'head' => 'Form Buat Surat'
+        ];
+        return view('layouts/main', $data);
     }
 }

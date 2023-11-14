@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title><?= $title ?></title>
     
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
 
@@ -32,7 +32,87 @@
 <body>
 <div id="app">
     <div id="sidebar" class='active'>
-        <?= $this->include('layouts/sidebar') ?>
+        <div class="sidebar-wrapper active">
+            <!-- <div class="sidebar-header">
+                <img src="" alt="" srcset="">
+            </div> -->
+            <!-- layout sidebar  -->
+            <div class="sidebar-menu">
+                <ul class="menu">
+                    <li class='sidebar-title'>Menu Utama</li>
+                    <li class="sidebar-item active ">
+                        <a href="index.html" class='sidebar-link'>
+                            <i data-feather="home" width="20"></i> 
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="user" width="20"></i> 
+                            <span>Kelola Pengguna</span>
+                        </a>
+                        <ul class="submenu ">                    
+                            <li>
+                                <a href="component-alert.html">Daftar Pengguna</a>
+                            </li>
+                            <li>
+                                <a href="component-alert.html">Tambah Pengguna</a>
+                            </li>  
+                        </ul>
+                    </li>
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="triangle" width="20"></i> 
+                            <span>Kelola Data Penduduk</span>
+                        </a>
+                        
+                        <ul class="submenu ">                  
+                            <li>
+                                <a href="component-alert.html">Data Penduduk</a>
+                            </li>
+                            <li>
+                                <a href="component-alert.html">Tambah Data Penduduk</a>
+                            </li>
+                        </ul>                
+                    </li>
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="file-text" width="20"></i> 
+                            <span>Kelola Surat</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li>
+                                <a href="component-extra-divider.html">Daftar Surat</a>
+                            </li>
+                            <li>
+                                <a href="component-extra-avatar.html">Buat Surat</a>
+                            </li>
+                            <li>
+                                <a href="component-extra-avatar.html">Surat Masuk</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- <li class='sidebar-title'>Forms &amp; Tables</li> -->
+                
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i data-feather="briefcase" width="20"></i> 
+                            <span>Kelola Data Wilayah</span>
+                        </a> 
+                        <ul class="submenu ">  
+                            <li>
+                                <a href="form-element-input.html">Kelola Kecamatan</a>
+                            </li>
+                            <li>
+                                <a href="form-element-input-group.html">Kelola Desa</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+        </div>
     </div>
     <div id="main">
         <nav class="navbar navbar-header navbar-expand navbar-light">
@@ -101,7 +181,8 @@
             </div>
         </nav>
 
-        <?= $this->renderSection('form-tambah-desa') ?>
+        <?= $this->renderSection('content') ?>
+
         <?= $this->include('layouts/footer') ?>
     </div>
 </div>
