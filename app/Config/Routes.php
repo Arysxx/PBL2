@@ -15,6 +15,7 @@ $routes->setTranslateURIDashes(false);
 // Routing authorization
 $routes->get('/', 'AuthController::index');
 $routes->get('/register', 'AuthController::register');
+$routes->post('/auth/register', 'UserController::register');
 $routes->get('/penduduk-login', 'AuthController::PendudukLogin');
 
 
@@ -48,5 +49,3 @@ $routes->get('/desa/tambah', 'DesaController::add_desa');
 $routes->get('/penduduk', 'PendudukController::index');
 
 // Routing logout
-
-
