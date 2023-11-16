@@ -22,7 +22,7 @@
                     <div class="text-center mb-5">
                         <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
                         <h3>Lupa Password</h3>
-                        <p>Please enter your email to receive password reset link.</p>
+                        <!-- <p>Please enter your email to receive password reset link.</p>  -->
                     </div>
                     <form action="index.html">
                         <div class="form-group">
