@@ -17,6 +17,7 @@ $routes->get('/', 'AuthController::index');
 $routes->get('/register', 'AuthController::register');
 $routes->post('/auth/register', 'UserController::register');
 $routes->get('/penduduk-login', 'AuthController::PendudukLogin');
+$routes->get('/lupa-password', 'AuthController::LupaPassword');
 
 
 // routing dashboard

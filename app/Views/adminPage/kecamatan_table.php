@@ -27,9 +27,8 @@
                 <table class='table table-striped' id="table1">
                     <thead>
                         <tr>
-                            <th>Username</th>
+                            <th>Nama</th>
                             <th>Kode Pos</th>
-                            <th>Nomor Telepon</th>
                             <th>Kode Kecamatan</th>
                             <th>Kode Wilayah</th>
                             <th></th>

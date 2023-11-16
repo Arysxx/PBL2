@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password - Voler Admin Dashboard</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
     
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon"> -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
 </head>
 
 <body>
@@ -20,8 +20,8 @@
             <div class="card py-4">
                 <div class="card-body">
                     <div class="text-center mb-5">
-                        <img src="assets/images/favicon.svg" height="48" class='mb-4'>
-                        <h3>Forgot Password</h3>
+                        <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
+                        <h3>Lupa Password</h3>
                         <p>Please enter your email to receive password reset link.</p>
                     </div>
                     <form action="index.html">
@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="clearfix">
-                            <button class="btn btn-primary float-right">Submit</button>
+                            <button class="btn btn-primary float-right">Kirim</button>
                         </div>
                     </form>
                 </div>

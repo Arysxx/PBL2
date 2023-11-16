@@ -36,7 +36,7 @@
                         <div class="form-group position-relative has-icon-left">
                             <div class="clearfix">
                                 <label for="password">Password</label>
-                                <a href="auth-forgot-password.html" class='float-right'>
+                                <a href="<?= base_url('lupa-password'); ?>" class='float-right'>
                                     <small>lupa password?</small>
                                 </a>
                             </div>

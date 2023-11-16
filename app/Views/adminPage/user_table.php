@@ -29,22 +29,13 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Nomor Telepon</th>
-                            <th>Password</th>
                             <th>Level</th>
-                            <th>Nama Desa</th>
+                            <th>Desa</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Graiden</td>
-                            <td>vehicula.aliquet@semconsequat.co.uk</td>
-                            <td>076 4820 8838</td>
-                            <td>Offenburg</td>
-                            <td>
-                                <span class="badge bg-success">Active</span>
-                            </td>
-                        </tr>
+            
                     </tbody>
                 </table>
             </div>

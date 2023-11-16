@@ -22,4 +22,8 @@ class AuthController extends BaseController
     {
         return view('authPage/PendudukAuth');
     }
+    public function lupaPassword(): string 
+    {
+        return view('authPage/LupaPassword');
+    }
 }
