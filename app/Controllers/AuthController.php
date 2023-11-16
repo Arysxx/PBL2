@@ -26,4 +26,24 @@ class AuthController extends BaseController
     {
         return view('authPage/LupaPassword');
     }
+
+    public function login()
+    {
+        // Other login logic
+
+        // Validate reCAPTCHA
+        $recaptcha = $this->request->getVar('g-recaptcha-response');
+
+        $recaptchaResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . config('Recaptcha')->secretKey . "&response=" . $recaptcha);
+
+        $recaptchaData = json_decode($recaptchaResponse);
+
+        if (!$recaptchaData->success) {
+            // reCAPTCHA validation failed
+            return redirect()->to('/login')->with('error', 'reCAPTCHA validation failed. Please try again.');
+        }
+
+        // Continue with the login process
+    }
+
 }

@@ -23,7 +23,7 @@
                         <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
                         <h3>Sign In</h3>
                     </div>
-                    <form action="index.html">
+                    <form action="/login" method="post">
                         <div class="form-group position-relative has-icon-left">
                             <label for="username">Username</label>
                             <div class="position-relative">
@@ -49,10 +49,7 @@
                         </div>
 
                         <div class='form-check clearfix my-4'>
-                            <div class="checkbox float-left">
-                                <input type="checkbox" id="checkbox1" class='form-check-input' >
-                                <label for="checkbox1">Remember me</label>
-                            </div>
+                            <div class="g-recaptcha" data-sitekey="<?= config('Recaptcha')->siteKey ?>"></div>
                             <div class="float-right">
                                 <a href="<?= base_url('register') ?>">Tidak memiliki akun?</a>
                             </div>
@@ -70,7 +67,7 @@
     </div>
     <script src="assets/js/feather-icons/feather.min.js"></script>
     <script src="assets/js/app.js"></script>
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="assets/js/main.js"></script>
 </body>
 
