@@ -206,7 +206,7 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- <div class="card widget-todo">
+                <!-- <div class="card widget-todo">user
                     <div class="card-header border-bottom d-flex justify-content-between align-items-center">
                         <h4 class="card-title d-flex">
                             <i class='bx bx-check font-medium-5 pl-25 pr-75'></i>Progress

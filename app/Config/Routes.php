@@ -43,6 +43,7 @@ $routes->get('/kecamatan/tambah', 'KecamatanController::add_kecamatan');
 // routing kelola desa
 $routes->get('/desa', 'DesaController::index');
 $routes->get('/desa/tambah', 'DesaController::add_desa');
+$routes->post('/desa/getDesa', 'AuthController::getDesa');
 
 
 // routing  kelola penduduk 

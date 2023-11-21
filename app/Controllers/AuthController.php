@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-
+use App\Models\DesaModel;
+use App\Models\KecamatanModel;
 class AuthController extends BaseController
 {
     public function index(): string
@@ -12,12 +13,21 @@ class AuthController extends BaseController
     }    
     public function register(): string
     {
-        return view('authPage/auth-register');
+        $kecamatanModel = new KecamatanModel();
+        $data['kecamatan'] = $kecamatanModel->findAll();
+        return view('authPage/auth-register', $data);
     }    
-    // public function index()
-    // {
-    //     return view('authPage/auth-login');
-    // }
+    public function getDesa()
+    {
+        $request = $this->request;
+        $kecamatanId = $request->getPost('kecamatan_id');
+
+        $desaModel = new DesaModel();
+        $desaList = $desaModel->where('id_kecamatan', $kecamatanId)->findAll();
+
+        echo view('component/opsiDesa', ['desaList' => $desaList]);
+    }
+
     public function PendudukLogin(): string 
     {
         return view('authPage/PendudukAuth');

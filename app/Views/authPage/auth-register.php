@@ -9,6 +9,23 @@
 
     <!-- <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon"> -->
     <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#Kecamatan").change(function(){
+                var kecamatanId = $(this).val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('desa/getDesa'); ?>",
+                    data: { kecamatan_id: kecamatanId },
+                    success: function(data){
+                        $("#Desa").html(data);
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <style>
     .garamond {
@@ -61,10 +78,9 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <select id="Kecamatan" name="Kecamatan" class="form-select">
-                                                <option value="" selected disabled>Pilih Kecamatan</option>
-                                                <option class="dropdown-item" value="kecamatan1">Kecamatan 1</option>
-                                                <option class="dropdown-item" value="kecamatan2">Kecamatan 2</option>
-                                                <!-- Tambahkan opsi-opsi lainnya sesuai kebutuhan -->
+                                            <?php foreach ($kecamatan as $item) : ?>
+                                                <option value="<?= $item['id']; ?>"><?= $item['nama']; ?></option>
+                                            <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="col-md-4">
@@ -72,14 +88,11 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <select id="Desa" name="Desa" class="form-select">
-                                                <option value="" selected disabled>Pilih Desa</option>
-                                                <option class="dropdown-item" value="kecamatan1">Desa 1</option>
-                                                <option class="dropdown-item" value="kecamatan2">Desa 2</option>
-                                                <!-- Tambahkan opsi-opsi lainnya sesuai kebutuhan -->
+             
                                             </select>
                                             <!-- <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button> -->
                                         </div>
-                                        <a href="<?= base_url('/'); ?>">Have an account? Login Here</a>
+                                        <a href="<?= base_url('/'); ?>">Sudah punya Akun? Login</a>
                                         <div class="col-sm-12 d-flex justify-content-end">
                                             <input type="submit" class="btn btn-primary mr-1 mb-1" value="Register">
                                         </div>

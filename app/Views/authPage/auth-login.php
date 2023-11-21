@@ -9,6 +9,11 @@
     
     <!-- <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon"> -->
     <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
+    <script>
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+    </script>
 </head>
 
 <body>
@@ -49,7 +54,10 @@
                         </div>
 
                         <div class='form-check clearfix my-4'>
-                            <div class="g-recaptcha" data-sitekey="<?= config('Recaptcha')->siteKey ?>"></div>
+                        <div class="g-recaptcha" 
+                                data-sitekey="6LfkXxIpAAAAAMnOWt2UGO5mkrXKmjEg34asMfg_" 
+                                data-callback='onSubmit' 
+                                data-action='submit'></div>
                             <div class="float-right">
                                 <a href="<?= base_url('register') ?>">Tidak memiliki akun?</a>
                             </div>
@@ -67,8 +75,9 @@
     </div>
     <script src="assets/js/feather-icons/feather.min.js"></script>
     <script src="assets/js/app.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfkXxIpAAAAAMnOWt2UGO5mkrXKmjEg34asMfg_"></script>
 </body>
 
 </html>

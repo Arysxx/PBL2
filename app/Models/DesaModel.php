@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class DesaModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'desas';
+    protected $table            = 'desa';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['nama', 'kode_pos', 'id_kecamatan'];
 
     // Dates
     protected $useTimestamps = false;
