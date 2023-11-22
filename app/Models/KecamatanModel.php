@@ -13,7 +13,7 @@ class KecamatanModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama', 'kode_pos', 'kode_kecamatan', 'kode_wilayah'];
+    protected $allowedFields    = ['nama', 'kode_pos', 'kode_wilayah'];
 
     // Dates
     protected $useTimestamps = false;

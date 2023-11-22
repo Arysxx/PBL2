@@ -14,13 +14,13 @@
         $(document).ready(function(){
             $("#Kecamatan").change(function(){
                 var kecamatanId = $(this).val();
-
+                console.log(kecamatanId);
                 $.ajax({
                     type: "POST",
                     url: "<?php echo base_url('desa/getDesa'); ?>",
-                    data: { kecamatan_id: kecamatanId },
+                    data: { id_kecamatan: kecamatanId },
                     success: function(data){
-                        $("#Desa").html(data);
+                        $("#desa").html(data);
                     }
                 });
             });
@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <div class="text-center mb-5">
                                 <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
-                                <h3>Registrasi</h3>
+                                <h3>Form Registrasi</h3>
                             </div>
                             <form class="form form-horizontal" action="/auth/register" method="post">
                                 <?= csrf_field() ?>
@@ -78,6 +78,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <select id="Kecamatan" name="Kecamatan" class="form-select">
+                                                <option value="">Pilih Kecamatan</option>
                                             <?php foreach ($kecamatan as $item) : ?>
                                                 <option value="<?= $item['id']; ?>"><?= $item['nama']; ?></option>
                                             <?php endforeach; ?>
@@ -87,7 +88,8 @@
                                             <label>Desa</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <select id="Desa" name="Desa" class="form-select">
+                                            <select id="desa" name="desa" class="form-select">
+                                            <option value="">Pilih Desa</option>
              
                                             </select>
                                             <!-- <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button> -->

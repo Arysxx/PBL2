@@ -13,7 +13,7 @@ class DesaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama', 'kode_pos', 'id_kecamatan'];
+    protected $allowedFields    = ['nama', 'kode_pos', 'kode_wilayah', 'id_kecamatan'];
 
     // Dates
     protected $useTimestamps = false;

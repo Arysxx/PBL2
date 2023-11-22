@@ -14,6 +14,7 @@ $routes->setTranslateURIDashes(false);
 
 // Routing authorization
 $routes->get('/', 'AuthController::index');
+$routes->post('/', 'AuthController::index');
 $routes->get('/login', 'AuthController::login');
 $routes->get('/register', 'AuthController::register');
 $routes->post('/auth/register', 'UserController::register');

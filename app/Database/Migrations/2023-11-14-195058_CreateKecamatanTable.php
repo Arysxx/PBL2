@@ -24,11 +24,6 @@ class CreateKecamatanTable extends Migration
                 'constraint' => '10',
                 'null' => true,
             ],
-            'kode_kecamatan' => [
-                'type' => 'VARCHAR',
-                'constraint' => '10',
-                'null' => true,
-            ],
             'kode_wilayah' => [
                 'type' => 'VARCHAR',
                 'constraint' => '10',

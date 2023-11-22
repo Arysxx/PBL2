@@ -33,30 +33,30 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                            <label for="first-name-vertical">First Name</label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="fname"
-                                                placeholder="First Name">
+                                            <label for="nama-desa">Nama Desa</label>
+                                            <input type="text" id="nama-desa" class="form-control" name="fname"
+                                                placeholder="Nama Desa">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="email-id-vertical">Email</label>
+                                                <label for="email-id-vertical">Kecamatan</label>
                                                 <input type="email" id="email-id-vertical" class="form-control" name="email-id"
-                                                placeholder="Email">
+                                                placeholder="Kecamatan">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="contact-info-vertical">Mobile</label>
-                                                <input type="number" id="contact-info-vertical" class="form-control" name="contact"
-                                                placeholder="Mobile">
+                                                <label for="kode-pos">Kode Pos</label>
+                                                <input type="number" id="kode-pos" class="form-control" name="contact"
+                                                placeholder="Kode Pos">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="password-vertical">Password</label>
-                                                <input type="password" id="password-vertical" class="form-control" name="contact"
-                                                placeholder="Password">
+                                                <label for="kode-wilayah">Kode Wilayah</label>
+                                                <input type="text" id="kode-wilayah" class="form-control" name="contact"
+                                                placeholder="Kode Wilayah">
                                             </div>
                                         </div>
                                         <div class="col-12 d-flex justify-content-end">

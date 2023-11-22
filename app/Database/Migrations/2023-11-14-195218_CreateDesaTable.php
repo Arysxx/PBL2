@@ -24,6 +24,11 @@ class CreateDesaTable extends Migration
                 'constraint' => '10',
                 'null' => true,
             ],
+            'kode_wilayah' => [
+                'type' => 'VARCHAR',
+                'constraint' => '16',
+                'null' => true,
+            ],
             'id_kecamatan' => [
                 'type' => 'INT',
                 'constraint' => 5,

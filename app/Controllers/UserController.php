@@ -31,7 +31,7 @@ class UserController extends BaseController
 
         if ($this->request->getPost() === 'post') {
             $rules = [
-                'username' => 'required|min_length[3]|max_length[100]',
+                'username' => 'required|min_length[3]|is_unique[users.username]|max_length[100]',
                 'email' => 'required|valid_email|is_unique[users.email]',
                 'nomor_telpon' => 'required|min_length[10]|max_length[20]',
                 'password' => 'required|min_length[6]|max_length[255]',
@@ -43,10 +43,10 @@ class UserController extends BaseController
                 $newData = [
                     'username' => $this->request->getPost('username'),
                     'email' => $this->request->getPost('email'),
-                    'nomor_telepon' => $this->request->getPost('nomor_telpon'),
+                    'nomor_telpon' => $this->request->getPost('nomor_telpon'),
                     'password' => $this->request->getPost('password'),
                     'role' => 'admin-desa',
-                    'id-desa' => 1
+                    'id_desa' => $this->request->getPost('desa')
                 ];
 
                 $model->save($newData);
@@ -58,6 +58,6 @@ class UserController extends BaseController
             }
         }
 
-        return view('authPage/auth-register', $data);
+        return redirect()->to('/register');
     }
 }

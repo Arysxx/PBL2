@@ -26,9 +26,9 @@
                 <div class="card-body">
                     <div class="text-center mb-5">
                         <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
-                        <h3>Sign In</h3>
+                        <h3>Login</h3>
                     </div>
-                    <form action="/login" method="post">
+                    <form action="/" method="post">
                         <div class="form-group position-relative has-icon-left">
                             <label for="username">Username</label>
                             <div class="position-relative">
@@ -54,16 +54,17 @@
                         </div>
 
                         <div class='form-check clearfix my-4'>
-                        <div class="g-recaptcha" 
-                                data-sitekey="6LfkXxIpAAAAAMnOWt2UGO5mkrXKmjEg34asMfg_" 
-                                data-callback='onSubmit' 
-                                data-action='submit'></div>
+                        <!-- <div ></div> -->
                             <div class="float-right">
                                 <a href="<?= base_url('register') ?>">Tidak memiliki akun?</a>
                             </div>
                         </div>
                         <div class="clearfix">
-                            <button class="btn btn-primary float-right">Submit</button>
+                            <!-- <button type="submit" class="btn btn-primary float-right g-recaptcha" 
+                                data-sitekey="6LfkXxIpAAAAAMnOWt2UGO5mkrXKmjEg34asMfg_" 
+                                data-callback='onSubmit' 
+                                data-action='submit'>Submit</button> -->
+                                <button type="submit" class="btn btn-primary float-right">Login</button>
                         </div>
                     </form>
                 </div>
