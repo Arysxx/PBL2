@@ -16,12 +16,12 @@ class PendudukController extends BaseController
         return view('adminPage/penduduk_table', $page);
     }
 
-    public function add_kecamatan()
+    public function add_penduduk()
     {
         $page = [
             'title' => 'Tambah Penduduk',
             'head' => 'Tambah Penduduk'
         ];
-        return view('adminPage/add_kecamatan_form', $page);
+        return view('adminPage/add_penduduk_form', $page);
     }
 }

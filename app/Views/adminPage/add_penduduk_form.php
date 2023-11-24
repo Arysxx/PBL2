@@ -12,8 +12,8 @@
                 <nav aria-label="breadcrumb" class='breadcrumb-header'>
                     <ol class="breadcrumb">
                         <!-- <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li> -->
-                        <li class="breadcrumb-item"><a href="index.html">Kelola Desa</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Tambah Desa</li>
+                        <li class="breadcrumb-item"><a href="index.html">Kelola Penduduk</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tambah Penduduk</li>
                     </ol>
                 </nav>
             </div>
@@ -24,7 +24,7 @@
             <div class="col-md-10 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Form Tambah Desa</h4>
+                        <h4 class="card-title">Form Tambah Penduduk</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
@@ -34,36 +34,33 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                            <label for="nama-desa">Nama Desa</label>
-                                            <input type="text" id="nama-desa" class="form-control" name="fname"
-                                                placeholder="Nama Desa">
+                                            <label for="first-name-vertical">Nama</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="fname"
+                                                placeholder="First Name">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="kode-pos">Kode Pos</label>
-                                                <input type="number" id="kode-pos" class="form-control" name="contact"
-                                                placeholder="Kode Pos">
+                                                <label for="email-id-vertical">Email</label>
+                                                <input type="email" id="email-id-vertical" class="form-control" name="email-id"
+                                                placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="kode-wilayah">Kode Wilayah</label>
-                                                <input type="text" id="kode-wilayah" class="form-control" name="contact"
-                                                placeholder="Kode Wilayah">
+                                                <label for="contact-info-vertical">Mobile</label>
+                                                <input type="number" id="contact-info-vertical" class="form-control" name="contact"
+                                                placeholder="Mobile">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                            <label for="kode-wilayah">Kode Wilayah</label>
-                                                <select id="Kecamatan" name="Kecamatan" class="form-select">
-                                                    <option value="">Pilih Kecamatan</option>
-                                                <?php foreach ($data['kecamatan'] as $item) : ?>
-                                                    <option value="<?= $item['id']; ?>"><?= $item['nama']; ?></option>
-                                                <?php endforeach; ?>
-                                                </select>
+                                                <label for="password-vertical">Password</label>
+                                                <input type="password" id="password-vertical" class="form-control" name="contact"
+                                                placeholder="Password">
                                             </div>
                                         </div>
+
                                         <div class="col-12 d-flex justify-content-end">
                                             <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
                                             <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>

@@ -29,13 +29,24 @@
                         <tr>
                             <th>Nama</th>
                             <th>Kode Pos</th>
-                            <th>Kode Kecamatan</th>
                             <th>Kode Wilayah</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($kecamatan as $kec): ?>
+                            <tr>
+                                <td><?= $kec['nama']; ?></td>
+                                <td><?= $kec['kode_pos']; ?></td>
+                                <td><?= $kec['kode_wilayah']; ?></td>
+                                <td>
+                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
+                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>      
                     </tbody>
+
                 </table>
             </div>
         </div>

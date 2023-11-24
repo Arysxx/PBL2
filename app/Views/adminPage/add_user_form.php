@@ -29,6 +29,7 @@
                     <div class="card-content">
                         <div class="card-body">
                             <form class="form form-vertical">
+                                <?php csrf_field() ?>
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-12">

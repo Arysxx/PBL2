@@ -28,33 +28,34 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form form-vertical">
+                            <form class="form form-vertical" method="post" action="/kecamatan/save">
+                                <?php csrf_field() ?>
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
                                             <label for="first-name-vertical">Nama Kecamatan</label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="fname"
+                                            <input type="text" id="first-name-vertical" class="form-control" name="kecamatan"
                                                 placeholder="Nama Kecamatan">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="email-id-vertical">Kode Pos</label>
-                                                <input type="text" id="email-id-vertical" class="form-control" name="email-id"
+                                                <input type="text" id="email-id-vertical" class="form-control" name="kodepos"
                                                 placeholder="Kode Pos">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="contact-info-vertical">Kode Wilayah</label>
-                                                <input type="text" id="contact-info-vertical" class="form-control" name="contact"
+                                                <input type="text" id="contact-info-vertical" class="form-control" name="kode_wilayah"
                                                 placeholder="Kode Wilayah">
                                             </div>
                                         </div>
                                         <div class="col-12 d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
-                                            <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
+                                            <button type="submit" class="btn btn-primary mr-1 mb-1">Simpan</button>
+                                            <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Kembali</button>
                                         </div>
                                     </div>
                                 </div>

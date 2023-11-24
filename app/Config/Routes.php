@@ -17,7 +17,7 @@ $routes->get('/', 'AuthController::index');
 $routes->post('/', 'AuthController::index');
 $routes->get('/login', 'AuthController::login');
 $routes->get('/register', 'AuthController::register');
-$routes->post('/auth/register', 'UserController::register');
+$routes->post('/register_add', 'UserController::register');
 $routes->get('/penduduk-login', 'AuthController::PendudukLogin');
 $routes->get('/lupa-password', 'AuthController::LupaPassword');
 
@@ -39,6 +39,7 @@ $routes->get('surat/editor', 'EditorController::index');
 // routing kelola kecamatan
 $routes->get('/kecamatan', 'KecamatanController::index');
 $routes->get('/kecamatan/tambah', 'KecamatanController::add_kecamatan');
+$routes->post('/kecamatan/save', 'KecamatanController::add');
 
 
 // routing kelola desa
@@ -51,5 +52,6 @@ $routes->post('/desa/getDesa', 'AuthController::getDesa');
 
 // routing penduduk 
 $routes->get('/penduduk', 'PendudukController::index');
+$routes->get('/penduduk/tambah', 'PendudukController::add_penduduk');
 
 // Routing logout

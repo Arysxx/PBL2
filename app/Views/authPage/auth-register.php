@@ -45,7 +45,7 @@
                                 <!-- <img src="assets/images/favicon.svg" height="48" class='mb-4'> -->
                                 <h3>Form Registrasi</h3>
                             </div>
-                            <form class="form form-horizontal" action="/auth/register" method="post">
+                            <form class="form form-horizontal" action="/register_add" method="post">
                                 <?= csrf_field() ?>
                                 <div class="form-body">
                                     <div class="row">

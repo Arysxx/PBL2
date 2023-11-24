@@ -31,11 +31,23 @@
                             <th>Nomor Telepon</th>
                             <th>Level</th>
                             <th>Desa</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-            
+                        <?php foreach($data as $user): ?>
+                        <tr>
+                            <td><?= $user['username']; ?></td>
+                            <td><?= $user['email']; ?></td>
+                            <td><?= $user['nomor_telpon']; ?></td>
+                            <td><?= $user['role']; ?></td>
+                            <td><?= $user['id_desa']; ?></td>
+                            <td>
+                                <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
+                                <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
+                            </td>
+                        </tr>
+                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

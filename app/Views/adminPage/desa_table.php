@@ -28,6 +28,7 @@
                             <tr>
                                 <th>Nama</th>
                                 <th>Kode Pos</th>
+                                <th>Kode wilayah</th>
                                 <th>Nama Kecamatan</th>
                                 <th></th>
                             </tr>

@@ -9,12 +9,15 @@ class UserController extends BaseController
 {
     public function index()
     {
-        $page = [
+        $User = new UserModel();
+        $userData = $User->findAll();
+        $data = [
             'title' => 'Data Pengguna',
-            'head' => 'Data Pengguna'
+            'head' => 'Data Pengguna',
+            'data' => $userData
         ];
 
-        return view('adminPage/user_table', $page);
+        return view('adminPage/user_table', $data);
     }
     public function add_user()
     {
@@ -29,7 +32,7 @@ class UserController extends BaseController
     {
         $data = [];
 
-        if ($this->request->getPost() === 'post') {
+        // if ($this->request->getVar() === 'post') {
             $rules = [
                 'username' => 'required|min_length[3]|is_unique[users.username]|max_length[100]',
                 'email' => 'required|valid_email|is_unique[users.email]',
@@ -39,15 +42,16 @@ class UserController extends BaseController
 
             if ($this->validate($rules)) {
                 $model = new UserModel();
-
+                $password = $this->request->getPost('password');
                 $newData = [
                     'username' => $this->request->getPost('username'),
                     'email' => $this->request->getPost('email'),
                     'nomor_telpon' => $this->request->getPost('nomor_telpon'),
-                    'password' => $this->request->getPost('password'),
+                    'password' => $hashedPassword = hash('sha256', $password),
                     'role' => 'admin-desa',
                     'id_desa' => $this->request->getPost('desa')
                 ];
+                // dd($newData);
 
                 $model->save($newData);
 
@@ -56,7 +60,7 @@ class UserController extends BaseController
             } else {
                 $data['validation'] = $this->validator;
             }
-        }
+        // }
 
         return redirect()->to('/register');
     }
