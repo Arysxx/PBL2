@@ -43,8 +43,8 @@
                             <td><?= $user['role']; ?></td>
                             <td><?= $user['id_desa']; ?></td>
                             <td>
-                                <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
-                                <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
+                                <a href="<?= site_url('/user/edit/'. $user["id"]); ?>"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
+                                <a href="<?= site_url('/user/delete/'. $user["id"]); ?>"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
                             </td>
                         </tr>
                          <?php endforeach; ?>

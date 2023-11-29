@@ -12,14 +12,14 @@ class Home extends BaseController
         ];
         return view('adminPage/dashboard', $page);
     }
-    public function dashboard(): string
-    {
-        return view('adminPage/index');
-    }
+    // public function dashboard(): string
+    // {
+    //     return view('adminPage/index');
+    // }
 
-    public function layout(): string
-    {
-        return view('component/file');
-    }
+    // public function layout(): string
+    // {
+    //     return view('component/file');
+    // }
 
 }

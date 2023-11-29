@@ -7,12 +7,12 @@
     
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
 
-    <link rel="stylesheet" href="<?= base_url('assets/vendors/chartjs/Chart.min.css') ?>">
-
+    <!-- <link rel="stylesheet" href=" base_url('assets/vendors/chartjs/Chart.min.css') ?>"> -->
     <link rel="stylesheet" href="<?= base_url('assets/vendors/perfect-scrollbar/perfect-scrollbar.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
     <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.svg" type="image/x-icon') ?>">
     <script src="https://cdn.tiny.cloud/1/odx1buc7ahmlvmxn270cvyv1ii0781wqqbw0clbi556zje5v/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script>
         tinymce.init({
@@ -177,10 +177,10 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <!-- <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Profile</a> -->
-                            <a class="dropdown-item" href="#"><i data-feather="user"></i>Profile</a>
-                            <a class="dropdown-item" href="#"><i data-feather="settings"></i>Account</a>
+                            <a class="dropdown-item" href="/profil"><i data-feather="user"></i>Profile</a>
+                            <a class="dropdown-item" href="/setting"><i data-feather="settings"></i>Account</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                            <a class="dropdown-item" href="/logout"><i data-feather="log-out"></i> Logout</a>
                         </div>
                     </li>
                 </ul>

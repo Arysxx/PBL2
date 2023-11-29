@@ -4,30 +4,31 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\KecamatanModel;
+
 class KecamatanController extends BaseController
 {
     public function index()
     {
         $Kecamatan = new KecamatanModel();
         $dataKecamatan = $Kecamatan->findAll();
-        $page = [
+        $data = [
             'title' => 'Data Kecamatan',
             'head' => 'Data Kecamatan',
             'kecamatan' => $dataKecamatan
         ];
-        return view('adminPage/kecamatan_table', $page);
+        return view('adminPage/Kecamatan/kecamatan_table', $data);
     }
 
-    public function add_kecamatan()
+    public function tambah_kecamatan()
     {
-        $page = [
+        $data = [
             'title' => 'Tambah Kecamatan',
             'head' => 'Tambah Kecamatan'
         ];
-        return view('adminPage/add_kecamatan_form', $page);
+        return view('adminPage/Kecamatan/add_kecamatan_form', $data);
     }
 
-    public function add(){
+    public function insert(){
         $Data = [];
         
         $rules = [
@@ -53,5 +54,35 @@ class KecamatanController extends BaseController
         }
 
         return redirect()->to('/kecamatan/tambah');
+    }
+
+    public function edit($id){
+        $DataKecamatan = new KecamatanModel();
+        $data = [
+            'title' => 'Edit Kecamatan',
+            'head' => 'Edit  Kecamatan',
+            'kecamatan' => $DataKecamatan->find($id)    
+        ];
+        // dd($data);
+        return view('adminPage/Kecamatan/edit_kecamatan', $data);
+    }
+
+
+    public function update(){
+        $kecamatan = new KecamatanModel();
+        $newData = [
+            'nama' => $this->request->getPost('kecamatan'),
+            'kode_pos' => $this->request->getPost('kodepos'),
+            'kode_wilayah' => $this->request->getPost('kode_wilayah')
+        ];
+        $kecamatan->update($this->request->getPost('id'), $newData);
+        return redirect()->to('/kecamatan');
+    }
+
+    // method untuk delete data
+    public function delete($id){
+        $kecamatan = new KecamatanModel();
+        $kecamatan->delete($id);
+        return redirect()->to('/kecamatan');
     }
 }

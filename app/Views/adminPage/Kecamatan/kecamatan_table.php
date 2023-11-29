@@ -40,8 +40,8 @@
                                 <td><?= $kec['kode_pos']; ?></td>
                                 <td><?= $kec['kode_wilayah']; ?></td>
                                 <td>
-                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
-                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
+                                    <a href="<?= site_url('/kecamatan/edit/' . $kec['id']); ?>"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
+                                    <a href="<?= site_url('/kecamatan/delete/' . $kec['id']); ?>"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>      

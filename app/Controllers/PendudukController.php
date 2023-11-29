@@ -13,7 +13,7 @@ class PendudukController extends BaseController
             'title' => 'Data Penduduk',
             'head' => 'Data Penduduk'
         ];
-        return view('adminPage/penduduk_table', $page);
+        return view('adminPage/Penduduk/penduduk_table', $page);
     }
 
     public function add_penduduk()
@@ -22,6 +22,6 @@ class PendudukController extends BaseController
             'title' => 'Tambah Penduduk',
             'head' => 'Tambah Penduduk'
         ];
-        return view('adminPage/add_penduduk_form', $page);
+        return view('adminPage/Penduduk/add_penduduk_form', $page);
     }
 }

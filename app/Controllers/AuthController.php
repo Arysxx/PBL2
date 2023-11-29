@@ -35,25 +35,29 @@ class AuthController extends BaseController
     }    
     public function register(): string
     {
-        $kecamatanModel = new KecamatanModel();
-        $data['kecamatan'] = $kecamatanModel->findAll();
-        return view('authPage/auth-register', $data);
-    }    
+        if($this->request->getMethod() === 'post'){
+            dd($this->request->getPost());
+        }
+        else{
+            $kecamatanModel = new KecamatanModel();
+            $data['kecamatan'] = $kecamatanModel->findAll();
+            return view('authPage/auth-register', $data);
+        }    
+    }
     public function getDesa()
     {
         $request = $this->request;
         $kecamatanId = $request->getPost('id_kecamatan');
         $desaModel = new DesaModel();
         $desaList = $desaModel->where('id_kecamatan', $kecamatanId)->findAll();
-
         return view('component/opsiDesa', ['desaList' => $desaList]);
-
     }
 
     public function PendudukLogin(): string 
     {
         return view('authPage/PendudukAuth');
     }
+
     public function lupaPassword(): string 
     {
         return view('authPage/LupaPassword');
@@ -62,14 +66,10 @@ class AuthController extends BaseController
     public function login()
     {
         // Other login logic
-
         // Validate reCAPTCHA
         $recaptcha = $this->request->getVar('g-recaptcha-response');
-
         $recaptchaResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . config('Recaptcha')->secretKey . "&response=" . $recaptcha);
-
         $recaptchaData = json_decode($recaptchaResponse);
-
         if (!$recaptchaData->success) {
             // reCAPTCHA validation failed
             return redirect()->to('/')->with('error', 'reCAPTCHA validation failed. Please try again.');
@@ -77,5 +77,12 @@ class AuthController extends BaseController
 
         // Continue with the login process
     }
+    public function logout()
+    {
+        // Perform logout logic here
+        // For example, you can unset session variables, destroy the session, etc.
 
+        // Redirect to the home page after logout
+        return redirect()->to('/');
+    }
 }

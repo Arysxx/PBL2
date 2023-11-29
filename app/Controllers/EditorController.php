@@ -12,6 +12,6 @@ class EditorController extends BaseController
             'title' => 'Buat Surat',
             'head' => 'Form Buat Surat'
         ];
-        return view('adminPage/textEditor', $data);
+        return view('adminPage/Surat/textEditor', $data);
     }
 }

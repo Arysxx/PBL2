@@ -30,10 +30,22 @@
                                 <th>Kode Pos</th>
                                 <th>Kode wilayah</th>
                                 <th>Nama Kecamatan</th>
-                                <th></th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                        <?php foreach($data as $desa): ?>
+                            <tr>
+                                <td><?= $desa['nama']; ?></td>
+                                <td><?= $desa['kode_pos']; ?></td>
+                                <td><?= $desa['kode_wilayah']; ?></td>
+                                <td><?= $desa['id_kecamatan']; ?></td>
+                                <td>
+                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
+                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -45,6 +57,4 @@
 <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
 <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
 <script src="assets/js/vendors.js"></script>
-
-
 <?= $this->endSection(); ?>

@@ -53,25 +53,25 @@
                                             <label>Nama Pengguna</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="text" id="username" class="form-control" name="username">
+                                            <input type="text" id="username" class="form-control" name="username" placeholder="nama pengguna anda">
                                         </div>
                                         <div class="col-md-4">
                                             <label>Email</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="email" id="email-id" class="form-control" name="email">
+                                            <input type="email" id="email-id" class="form-control" name="email" placeholder="email anda">
                                         </div>
                                         <div class="col-md-4">
                                             <label>Nomer Telepon</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="text" id="nomer-hp" class="garamond form-control" name="nomor_telpon">
+                                            <input type="text" id="nomer-hp" class="garamond form-control" name="nomor_telpon" placeholder="nomor telepon anda">
                                         </div>
                                         <div class="col-md-4">
                                             <label>Password</label>
                                         </div>
                                         <div class="col-md-8 form-group">
-                                            <input type="password" id="password" class="form-control" name="password" placeholder="password">
+                                            <input type="password" id="password" class="form-control" name="password" placeholder="password anda">
                                         </div>
                                         <div class="col-md-4">
                                             <label>Kecamatan</label>
