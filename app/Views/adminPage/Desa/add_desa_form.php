@@ -28,28 +28,28 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form form-vertical">
-                                <?php csrf_field() ?>
+                            <form class="form form-vertical" action="/desa/insert" method="post">
+                                <?php csrf_field(); ?>
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
                                             <label for="nama-desa">Nama Desa</label>
-                                            <input type="text" id="nama-desa" class="form-control" name="fname"
+                                            <input type="text" id="nama-desa" class="form-control" name="desa"
                                                 placeholder="Nama Desa">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="kode-pos">Kode Pos</label>
-                                                <input type="number" id="kode-pos" class="form-control" name="contact"
+                                                <input type="number" id="kode-pos" class="form-control" name="kodepos"
                                                 placeholder="Kode Pos">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="kode-wilayah">Kode Wilayah</label>
-                                                <input type="text" id="kode-wilayah" class="form-control" name="contact"
+                                                <input type="text" id="kode-wilayah" class="form-control" name="kode_wilayah"
                                                 placeholder="Kode Wilayah">
                                             </div>
                                         </div>
@@ -58,14 +58,14 @@
                                             <label for="kode-wilayah">Kode Wilayah</label>
                                                 <select id="Kecamatan" name="Kecamatan" class="form-select">
                                                     <option value="">Pilih Kecamatan</option>
-                                                <?php foreach ($data['kecamatan'] as $item) : ?>
+                                                <?php foreach ($data['kecamatan'] as $item): ?>
                                                     <option value="<?= $item['id']; ?>"><?= $item['nama']; ?></option>
                                                 <?php endforeach; ?>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-12 d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                            <button type="submit" class="btn btn-primary mr-1 mb-1">Simpan</button>
                                             <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
                                         </div>
                                     </div>

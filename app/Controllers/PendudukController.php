@@ -9,19 +9,19 @@ class PendudukController extends BaseController
     public function index()
     {
 
-        $page = [
+        $data = [
             'title' => 'Data Penduduk',
             'head' => 'Data Penduduk'
         ];
-        return view('adminPage/Penduduk/penduduk_table', $page);
+        return view('adminPage/Penduduk/penduduk_table', $data);
     }
 
-    public function add_penduduk()
+    public function tambah_penduduk()
     {
-        $page = [
+        $data = [
             'title' => 'Tambah Penduduk',
             'head' => 'Tambah Penduduk'
         ];
-        return view('adminPage/Penduduk/add_penduduk_form', $page);
+        return view('adminPage/Penduduk/add_penduduk_form', $data);
     }
 }

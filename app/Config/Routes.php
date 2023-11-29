@@ -55,7 +55,7 @@ $routes->group('kecamatan', function ($routes) {
 // Routing kelola desa
 $routes->group('desa', function ($routes) {
     $routes->get('/', 'DesaController::index');
-    $routes->get('tambah', 'DesaController::add_desa');
+    $routes->get('tambah', 'DesaController::tambah_desa');
     $routes->post('getDesa', 'AuthController::getDesa');
     $routes->post('insert', 'DesaController::insert');
     $routes->get('edit/(:num)', 'DesaController::edit/$1');
@@ -66,7 +66,7 @@ $routes->group('desa', function ($routes) {
 // Routing kelola penduduk
 $routes->group('penduduk', function ($routes) {
     $routes->get('/', 'PendudukController::index');
-    $routes->get('tambah', 'PendudukController::add_penduduk');
+    $routes->get('tambah', 'PendudukController::tambah_penduduk');
     $routes->post('insert', 'PendudukController::insert');
     $routes->get('edit/(:num)', 'PendudukController::edit/$1');
     $routes->post('update', 'PendudukController::update');

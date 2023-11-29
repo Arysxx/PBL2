@@ -12,8 +12,8 @@
                 <nav aria-label="breadcrumb" class='breadcrumb-header'>
                     <ol class="breadcrumb">
                         <!-- <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li> -->
-                        <li class="breadcrumb-item"><a href="index.html">Kelola Kecamatan</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Tambah Kecamatan</li>
+                        <li class="breadcrumb-item"><a href="index.html">Kelola Desa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit Desa</li>
                     </ol>
                 </nav>
             </div>
@@ -24,38 +24,50 @@
             <div class="col-md-10 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Form Tambah Kecamatan</h4>
+                        <h4 class="card-title">Form Edit Desa</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form form-vertical" method="post" action="/kecamatan/insert">
+                            <form class="form form-vertical" action="/desa/update" method="post">
                                 <?php csrf_field(); ?>
                                 <div class="form-body">
                                     <div class="row">
+                                        <input type="hidden" name= "id" value="<?= $desa['id']; ?>">
                                         <div class="col-12">
                                             <div class="form-group">
-                                            <label for="first-name-vertical">Nama Kecamatan</label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="kecamatan"
-                                                placeholder="Nama Kecamatan">
+                                            <label for="nama-desa">Nama Desa</label>
+                                            <input type="text" id="nama-desa" class="form-control" name="desa" value="<?= $desa['nama']; ?>"
+                                                placeholder="Nama Desa">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="email-id-vertical">Kode Pos</label>
-                                                <input type="text" id="email-id-vertical" class="form-control" name="kodepos"
+                                                <label for="kode-pos">Kode Pos</label>
+                                                <input type="number" id="kode-pos" class="form-control" name="kodepos" value="<?= $desa['kode_pos']; ?>"
                                                 placeholder="Kode Pos">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="contact-info-vertical">Kode Wilayah</label>
-                                                <input type="text" id="contact-info-vertical" class="form-control" name="kode_wilayah"
+                                                <label for="kode-wilayah">Kode Wilayah</label>
+                                                <input type="text" id="kode-wilayah" class="form-control" name="kode_wilayah" value="<?= $desa['kode_wilayah']; ?>"
                                                 placeholder="Kode Wilayah">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                            <label for="kode-wilayah">Kecamatan</label>
+                                                <select id="Kecamatan" name="Kecamatan" class="form-select" value="<?= $desa['id_kecamatan']; ?>">
+                                                    <option value="">Pilih Kecamatan</option>
+                                                <?php foreach ($kecamatan as $item) : ?>
+                                                    <option value="<?= $item['id']; ?>"><?= $item['nama']; ?></option>
+                                                <?php endforeach; ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-12 d-flex justify-content-end">
                                             <button type="submit" class="btn btn-primary mr-1 mb-1">Simpan</button>
-                                            <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Kembali</button>
+                                            <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
                                         </div>
                                     </div>
                                 </div>

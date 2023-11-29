@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/vendors/perfect-scrollbar/perfect-scrollbar.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
     <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.svg" type="image/x-icon') ?>">
-    <script src="https://cdn.tiny.cloud/1/odx1buc7ahmlvmxn270cvyv1ii0781wqqbw0clbi556zje5v/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- <script src="https://cdn.tiny.cloud/1/odx1buc7ahmlvmxn270cvyv1ii0781wqqbw0clbi556zje5v/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script>

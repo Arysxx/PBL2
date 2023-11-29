@@ -29,7 +29,7 @@
                     <div class="card-content">
                         <div class="card-body">
                             <form class="form form-vertical" action="/user/insert" method="post">
-                                <?php csrf_field() ?>
+                                <?php csrf_field(); ?>
                                 <div class="form-body">
                                     <div class="row">
                                     <input type="hidden" id="id" class="form-control" name="id" value="<?= $user['id']; ?>">

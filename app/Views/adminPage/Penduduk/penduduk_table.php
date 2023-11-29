@@ -30,8 +30,8 @@
                                 <th>No. NIK</th>
                                 <th>Nomor HP</th>
                                 <th>Alamat</th>
-                                <th></th>
-                                <th></th>
+                                <th>Desa</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -32,7 +32,7 @@ class KecamatanController extends BaseController
         $Data = [];
         
         $rules = [
-            'kecamatan' => 'required|min_length[3]|is_unique[users.username]|max_length[100]',
+            'kecamatan' => 'required|min_length[3]|is_unique[kecamatan.nama]|max_length[100]',
             'kodepos' => 'required|min_length[5]|max_length[6]',
             'kode_wilayah' => 'required|min_length[6]|max_length[20]',
 

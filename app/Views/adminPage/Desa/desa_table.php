@@ -41,8 +41,8 @@
                                 <td><?= $desa['kode_wilayah']; ?></td>
                                 <td><?= $desa['id_kecamatan']; ?></td>
                                 <td>
-                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
-                                    <a href="#"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
+                                    <a href="<?= site_url('/desa/edit/'. $desa["id"]); ?>"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="edit"></i></a>
+                                    <a href="<?= site_url('/desa/delete/'. $desa["id"]); ?>"><i class="badge-circle badge-circle-light-secondary font-medium-1" data-feather="trash-2"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
